@@ -10,7 +10,7 @@ The foods are consumed upon right clicking, so holding the right button will not
 InstaEat also allows the creation of "new" food items using the Custom Foods system.
 ***
 ## **Custom Foods:**
-Custom Foods are food items with new consumption values. This allows creation of "new" foods, even foods with [Custom Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects).
+Custom Foods are food items with new consumption values. This allows creation of "new" foods, even foods with [Custom Effects](#custom-food-effects).
 
 #### Setting Custom Food:
 1. Make sure you are doing this while logged into the game and not through the console.
@@ -19,7 +19,7 @@ Custom Foods are food items with new consumption values. This allows creation of
 4. Run the following command: `instaeat customfood set <hunger> <saturation> <chance>`
    - **hunger**: The amount of hunger points (hunger bar - on the bottom-right) the food will restore when consumed. Values: 0-20 (Integer).
    - **saturation**: The amount of saturation points the food will restore when consumed. Values: 0-20, precision of 0.1 (Example: 4 - ✓, 4.2 - ✓, 4.21 - ✕). Saturation is a hidden stat, for more information: [Hunger Mechanics](https://minecraft.gamepedia.com/Hunger#Mechanics)
-   - **chance** : The chance the custom food will apply its effects. Explained in the [Custom Food Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects) section. Values: 0-100 (Integer). ***Notice***: A Custom Food with a chance of 100 **will** be consumed even if both hunger and saturation bars are full(#).
+   - **chance** : The chance the custom food will apply its effects. Explained in the [Custom Food Effects](#custom-food-effects) section. Values: 0-100 (Integer). ***Notice***: A Custom Food with a chance of 100 **will** be consumed even if both hunger and saturation bars are full(#).
 
 After setting a custom food, the information regarding its Hunger and Saturation will be displayed in the lore section of the item. The chance will **not** be displayed.
 
@@ -48,7 +48,7 @@ Continue to get the list of all possible [status effects](https://minecraft.game
    - **duration**: How long, in seconds, the effect will last. Values: 1-1 Million (Integer).
    - **amplifier**: The level of the effect's strength - same as potion levels. Values: 1-256 (Integer).
 
-###### *Example*: While holding the [Baked Potato](https://github.com/DMan1629/InstaEat/blob/master/README.md#example-while-holding-a-baked-potato---instaeat-customfood-set-5-2-50) from before - `instaeat customfoodeffect add give ABSORPTION 10 2` 
+###### *Example*: While holding the [Baked Potato](#example-while-holding-a-baked-potato---instaeat-customfood-set-5-2-50) from before - `instaeat customfoodeffect add give ABSORPTION 10 2` 
 
 #### Custom Food Effects information:
 Run the command `instaeat customfoodeffect get` while holding a Custom Food with Effects to have all of the Food's Effects listed along with their information.
@@ -59,4 +59,4 @@ Run the command `instaeat customfoodeffect get` while holding a Custom Food with
 
 ***
 
-If any problems arise from the plugin, please open an [issue](https://github.com/DMan1629/InstaEat/issues) or in the plugin's [Spigot discussion page](../).
+If any problems arise from the plugin, please open an [issue](https://github.com/DMan1629/InstaEat/issues) or in the plugin's [Spigot discussion page]().
