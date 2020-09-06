@@ -3,6 +3,8 @@
 
 
 ## **Custom Foods:**
+Custom Foods are food items with new consumption values. They allow creation of "new" foods.
+
 #### Setting Custom Food:
 1. Make sure you are doing this while logged into the game and not through the console.
 2. Make sure you are Op or have the permission: `instaeat.command`.
@@ -21,6 +23,7 @@ Run the command `instaeat customfood get` while holding a Custom Food to have th
 
 #### Custom food removal:
 Run the command `instaeat customfood remove` while holding a Custom Food to return it to a regular item.
+
 
 
 
