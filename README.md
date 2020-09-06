@@ -13,6 +13,7 @@
    - **chance** : The chance the custom food will apply its effects. Explained in the [Custom Food Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects) section. Values: 0-100 (Integer).
 
 After setting a custom food, the information regarding its Hunger and Saturation will be displayed in the lore section of the item. The chance will **not** be displayed.
+
 ** ***Important***: Using this command on an item that is already a Custom Food will remove all its previous information (including Effects) and apply the new values afterwards.
 
 #### Custom food information:
