@@ -1,0 +1,16 @@
+
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
+plugin.yml
+bin/me/DMan16/CustomFood/CommandListener.class
+bin/me/DMan16/CustomFood/CustomFood.class
+bin/me/DMan16/CustomFood/CustomFoods.class
+bin/me/DMan16/CustomFood/TabComplete.class
+bin/me/DMan16/InstaEat/FoodListener.class
+bin/me/DMan16/InstaEat/InstaEat.class
+bin/me/DMan16/Utils/CheckVersion$Version.class
+bin/me/DMan16/Utils/CheckVersion.class
+bin/me/DMan16/Utils/MCFoodsDefault.class
+bin/me/DMan16/Utils/Permissions.class
+bin/me/DMan16/Utils/Utils.class
