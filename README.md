@@ -11,7 +11,7 @@ InstaEat also allows the creation of "new" food items using the Custom Foods sys
 
 
 ## **Custom Foods:**
-Custom Foods are food items with new consumption values. This allows creation of "new" foods, event with [Custom Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects).
+Custom Foods are food items with new consumption values. This allows creation of "new" foods, even foods with [Custom Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects).
 
 #### Setting Custom Food:
 1. Make sure you are doing this while logged into the game and not through the console.
@@ -36,9 +36,16 @@ Run the command `instaeat customfood remove` while holding a Custom Food to retu
 ## **Custom Food Effects:**
 Custom Food Effects are built-in Minecraft [status effects](https://minecraft.gamepedia.com/Status_effect#Summary_of_effects) that can be applied when a Custom Food is consumed. When a Custom Food with Effects is consumed, all of its Effects are applied to the consumer based on the Food's chance stat - 60 means there's a 60% chance the Effects will be applied; 100 means the Effects will **definitely** be applied.
 
-#### Setting Custom Food Effects:
+#### Adding Custom Food Effects:
 1. Make sure you are doing this while logged into the game and not through the console.
 2. Make sure you are Op or have the permission: `instaeat.command`.
 3. Make sure you are holding a Custom Food. The Effects can only be applied to Custom Foods.
 4. Start typing: `instaeat customfoodeffect add `, and be greeted with 2 options: `clear` and `give`
-   - **clear**: The effect set by this option will be **remvoed** on Effects success. A good example for this is the [Honey Bottle](https://minecraft.gamepedia.com/Honey_Bottle#Usage), which removes the Poison effect upon consumption.
+   - **clear**: The effect set by this option will be **remvoed** from the player. A good example for this is the [Honey Bottle](https://minecraft.gamepedia.com/Honey_Bottle#Usage), which removes the Poison effect upon consumption.
+   - **give**: The effect set by this option will be **added** to the player. Works same as Potions.
+
+Continue to get the list of all possible [status effects](https://minecraft.gamepedia.com/Status_effect#Summary_of_effects). If you've chosen the `clear` option - this is it. If you chose the `give` option, you must now specify the *duration* and afterwards the *amplifier*:
+   - **duration**: How long, in seconds, the effect will last. Values: 1-1 Million (Integer).
+   - **amplifier**: The level of the effect's strength - same as potion levels. Values: 1-256 (Integer).
+
+***
