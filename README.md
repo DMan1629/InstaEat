@@ -8,8 +8,7 @@ Food cannot be eaten when the both the hunger and saturation bars are full(#).
 The foods are consumed upon right clicking, so holding the right button will not not consume multiples. To consume few times in a row, one must reclick.
 
 InstaEat also allows the creation of "new" food items using the Custom Foods system.
-
-
+***
 ## **Custom Foods:**
 Custom Foods are food items with new consumption values. This allows creation of "new" foods, even foods with [Custom Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects).
 
@@ -20,19 +19,20 @@ Custom Foods are food items with new consumption values. This allows creation of
 4. Run the following command: `instaeat customfood set <hunger> <saturation> <chance>`
    - **hunger**: The amount of hunger points (hunger bar - on the bottom-right) the food will restore when consumed. Values: 0-20 (Integer).
    - **saturation**: The amount of saturation points the food will restore when consumed. Values: 0-20, precision of 0.1 (Example: 4 - ✓, 4.2 - ✓, 4.21 - ✕). Saturation is a hidden stat, for more information: [Hunger Mechanics](https://minecraft.gamepedia.com/Hunger#Mechanics)
-   - **chance** : The chance the custom food will apply its effects. Explained in the [Custom Food Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects) section. Values: 0-100 (Integer).
+   - **chance** : The chance the custom food will apply its effects. Explained in the [Custom Food Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects) section. Values: 0-100 (Integer). ***Notice***: A Custom Food with a chance of 100 **will** be consumed even if both hunger and saturation bars are full(#).
 
 After setting a custom food, the information regarding its Hunger and Saturation will be displayed in the lore section of the item. The chance will **not** be displayed.
 
+###### *Example*: While holding a Baked Potato - `instaeat customfood set 5 2 50`
+
 ** ***Important***: Using this command on an item that is already a Custom Food will remove all its previous information (including Effects) and apply the new values afterwards.
 
-#### Custom food information:
+#### Custom Food information:
 Run the command `instaeat customfood get` while holding a Custom Food to have the item's information displayed - hunger, saturation, chance.
 
-#### Custom food removal:
+#### Custom Food removal:
 Run the command `instaeat customfood remove` while holding a Custom Food to return it to a regular item.
-
-
+***
 ## **Custom Food Effects:**
 Custom Food Effects are built-in Minecraft [status effects](https://minecraft.gamepedia.com/Status_effect#Summary_of_effects) that can be applied when a Custom Food is consumed. When a Custom Food with Effects is consumed, all of its Effects are applied to the consumer based on the Food's chance stat - 60 means there's a 60% chance the Effects will be applied; 100 means the Effects will **definitely** be applied.
 
@@ -48,4 +48,11 @@ Continue to get the list of all possible [status effects](https://minecraft.game
    - **duration**: How long, in seconds, the effect will last. Values: 1-1 Million (Integer).
    - **amplifier**: The level of the effect's strength - same as potion levels. Values: 1-256 (Integer).
 
-***
+###### *Example*: While holding the Baked Potato from before - `instaeat customfoodeffect add give ABSORPTION 10 2` 
+
+#### Custom Food Effects information:
+Run the command `instaeat customfoodeffect get` while holding a Custom Food with Effects to have all of the Food's Effects listed along with their information.
+
+#### Custom Food Effects removal:
+- Run the command `instaeat customfoodeffect remove ` followed by an effect name while holding a Custom Food with Effects to remove the given effect.
+- Run the command `instaeat customfoodeffect remove_all` while holding a Custom Food with Effects to remove **all** if its Effects.
