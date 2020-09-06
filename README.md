@@ -48,7 +48,7 @@ Continue to get the list of all possible [status effects](https://minecraft.game
    - **duration**: How long, in seconds, the effect will last. Values: 1-1 Million (Integer).
    - **amplifier**: The level of the effect's strength - same as potion levels. Values: 1-256 (Integer).
 
-###### *Example*: While holding the Baked Potato from before - `instaeat customfoodeffect add give ABSORPTION 10 2` 
+###### *Example*: While holding the [Baked Potato](https://github.com/DMan1629/InstaEat/blob/master/README.md#example-while-holding-a-baked-potato---instaeat-customfood-set-5-2-50) from before - `instaeat customfoodeffect add give ABSORPTION 10 2` 
 
 #### Custom Food Effects information:
 Run the command `instaeat customfoodeffect get` while holding a Custom Food with Effects to have all of the Food's Effects listed along with their information.
@@ -56,3 +56,7 @@ Run the command `instaeat customfoodeffect get` while holding a Custom Food with
 #### Custom Food Effects removal:
 - Run the command `instaeat customfoodeffect remove ` followed by an effect name while holding a Custom Food with Effects to remove the given effect.
 - Run the command `instaeat customfoodeffect remove_all` while holding a Custom Food with Effects to remove **all** if its Effects.
+
+***
+
+If any problems arise from the plugin, please open an [issue](https://github.com/DMan1629/InstaEat/issues) or in the plugin's [Spigot discussion page]().
