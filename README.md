@@ -8,8 +8,8 @@ To set a custom food do the following:
 2. Make sure you are Op or have the permission: `instaeat.command`.
 3. Have a valid custom food material selected. Custom food materials include all types of food (except for Chorus Fruit) + Player Head.
 4. Run the following command: `instaeat set <hunger> <saturation> <chance>`
-   - **hunger**: The amount of hunger points (hunger bar - on the bottom-right) the food will restore when consumed.
-   - **saturation**: The amount of saturation points the food will restore when consumed. For information about saturation: [Hunger Mechanics](https://minecraft.gamepedia.com/Hunger#Mechanics)
-   - **chance** : [Custom Food Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects)
+  - **hunger**: The amount of hunger points (hunger bar - on the bottom-right) the food will restore when consumed.
+  - **saturation**: The amount of saturation points the food will restore when consumed. For information about saturation: [Hunger Mechanics](https://minecraft.gamepedia.com/Hunger#Mechanics)
+  - **chance** : [Custom Food Effects](https://github.com/DMan1629/InstaEat/blob/master/README.md#custom-food-effects)
   
   ## **Custom Food Effects:**
