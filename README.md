@@ -5,7 +5,7 @@
 ## **Custom Foods:**
 Custom Foods are food items with new consumption values. They allow creation of "new" foods.
 
-#### Setting Custom Food:
+### Setting Custom Food:
 1. Make sure you are doing this while logged into the game and not through the console.
 2. Make sure you are Op or have the permission: `instaeat.command`.
 3. Have a valid custom food material selected. Custom food materials include all types of food (except for Chorus Fruit) + Player Head.
@@ -18,10 +18,10 @@ After setting a custom food, the information regarding its Hunger and Saturation
 
 ** ***Important***: Using this command on an item that is already a Custom Food will remove all its previous information (including Effects) and apply the new values afterwards.
 
-#### Custom food information:
+### Custom food information:
 Run the command `instaeat customfood get` while holding a Custom Food to have the item's information displayed - hunger, saturation, chance.
 
-#### Custom food removal:
+### Custom food removal:
 Run the command `instaeat customfood remove` while holding a Custom Food to return it to a regular item.
 
 
