@@ -1,16 +1,16 @@
 # InstaEat
 #### Instant food consumption and custom foods!
 
-InstaEat immediately consumes the food item when right clicking. All the vailla Minecraft special effects - status effects, advancement progression, planting - have not changed.
+InstaEat immediately consumes the food item when right-clicking. All the vanilla Minecraft special effects - status effects, advancement progression, planting - have not changed.
 
 Food cannot be eaten when the both the hunger and saturation bars are full(#).
 
-The foods are consumed upon right clicking, so holding the right button will not not consume multiples. To consume few times in a row, one must reclick.
+The foods are consumed upon right-clicking, so holding the right button will not consume multiples. To consume a few times in a row, one must reclick.
 
 InstaEat also allows the creation of "new" food items using the Custom Foods system.
 ***
 ## **Custom Foods:**
-Custom Foods are food items with new consumption values. This allows creation of "new" foods, even foods with [Custom Effects](#custom-food-effects).
+Custom Foods are food items with new consumption values. This allows the creation of "new" foods, even foods with [Custom Effects](#custom-food-effects).
 
 #### Setting Custom Food:
 1. Make sure you are doing this while logged into the game and not through the console.
@@ -41,7 +41,7 @@ Custom Food Effects are built-in Minecraft [status effects](https://minecraft.ga
 2. Make sure you are Op or have the permission: `instaeat.command`.
 3. Make sure you are holding a Custom Food. The Effects can only be applied to Custom Foods.
 4. Start typing: `instaeat customfoodeffect add `, and be greeted with 2 options: `clear` and `give`
-   - **clear**: The effect set by this option will be **remvoed** from the player. A good example for this is the [Honey Bottle](https://minecraft.gamepedia.com/Honey_Bottle#Usage), which removes the Poison effect upon consumption.
+   - **clear**: The effect set by this option will be **removed** from the player. A good example of this is the [Honey Bottle](https://minecraft.gamepedia.com/Honey_Bottle#Usage), which removes the Poison effect upon consumption.
    - **give**: The effect set by this option will be **added** to the player. Works same as Potions.
 
 Continue to get the list of all possible [status effects](https://minecraft.gamepedia.com/Status_effect#Summary_of_effects). If you've chosen the `clear` option - this is it. If you chose the `give` option, you must now specify the *duration* and afterwards the *amplifier*:
