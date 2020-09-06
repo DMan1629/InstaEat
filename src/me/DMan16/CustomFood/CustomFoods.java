@@ -156,7 +156,7 @@ public class CustomFoods {
 					String usageAdd = customFoodEffectName + " " + customFoodEffect.get(1) + " <" + String.join("/",customFoodEffectAdd) + ">";
 					String usageClear = customFoodEffectName + " " + customFoodEffect.get(1) + " " + customFoodEffectAdd.get(1) + "<type>";
 					String usageGive = customFoodEffectName + customFoodEffect.get(1) + " " + customFoodEffectAdd.get(0) + 
-							" <type> <duration> <amplifier> (duration - seconds, Integer: 1-1M , amplifier - integer: 0-255)";
+							" <type> <duration> <amplifier> (duration - seconds, Integer: 1-1M , amplifier - integer: 1-256)";
 					if (args.length != 2 && args.length != 3 && args.length != 4 && args.length != 6) {
 						Utils.chatColorsUsage(sender,usage);
 						return;
@@ -185,7 +185,7 @@ public class CustomFoods {
 		        			}
 	        			} else if (args[2].equalsIgnoreCase(customFoodEffectAdd.get(0))) {
 	        				if (args.length != 6 || Integer.parseInt(args[4]) < 1 || Integer.parseInt(args[4]) > 1000000 ||
-			        				Integer.parseInt(args[5]) < 0 || Integer.parseInt(args[5]) > 255) {
+			        				Integer.parseInt(args[5]) < 1 || Integer.parseInt(args[5]) > 256) {
 	        					Utils.chatColorsUsage(sender,usageGive);
 	    						return;
 	        				}
@@ -424,7 +424,7 @@ public class CustomFoods {
 				if (splitEffectInfo.length == 2) {
 					try {
 						int dur = Integer.parseInt(splitEffectInfo[0]);
-						int amp = Integer.parseInt(splitEffectInfo[1]);
+						int amp = Integer.parseInt(splitEffectInfo[1]) - 1;
 						if (dur >= -1 && dur <= 1000000 && amp >= -1 && amp <= 255) {
 							return new PotionEffect(effect,dur,amp);
 						}
@@ -468,7 +468,7 @@ public class CustomFoods {
 	}
 
 	static void addCustomFoodEffect(ItemStack item, PotionEffect effect) {
-		addCustomFoodEffect(item,effect.getType().getName(),effect.getDuration(),effect.getAmplifier());
+		addCustomFoodEffect(item,effect.getType().getName(),effect.getDuration(),effect.getAmplifier() + 1);
 	}
 
 	static PersistentDataContainer removeCustomFoodEffect(PersistentDataContainer container, String effectType) {
