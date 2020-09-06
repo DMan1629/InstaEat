@@ -48,7 +48,9 @@ Continue to get the list of all possible [status effects](https://minecraft.game
    - **duration**: How long, in seconds, the effect will last. Values: 1-1 Million (Integer).
    - **amplifier**: The level of the effect's strength - same as potion levels. Values: 1-256 (Integer).
 
-###### *Example*: While holding the [Baked Potato](#example-while-holding-a-baked-potato---instaeat-customfood-set-5-2-50) from before - `instaeat customfoodeffect add give ABSORPTION 10 2` 
+** ***Important***: If the Food already has a version of the effect type, it will not allow readding. Also, due to Minecraft's mechanics, effects with greater duration/amplifier will prevent applying new effects of the same type or will overwrite an existing one.
+
+###### *Example*: While holding the [Baked Potato](#example-while-holding-a-baked-potato---instaeat-customfood-set-5-2-50) from before - `instaeat customfoodeffect add give ABSORPTION 10 2`, and afterwards `instaeat customfoodeffect add clear WEAKNESS`. After consuming the [Baked Potato](#example-while-holding-a-baked-potato---instaeat-customfood-set-5-2-50), there's a 50% chance that the player will get ABSORPTION 2 for 10 seconds and his WEAKNESS status effect will be removed.
 
 #### Custom Food Effects information:
 Run the command `instaeat customfoodeffect get` while holding a Custom Food with Effects to have all of the Food's Effects listed along with their information.
