@@ -23,4 +23,5 @@ Run the command `instaeat customfood get` while holding a Custom Food to have th
 Run the command `instaeat customfood remove` while holding a Custom Food to return it to a regular item.
 
 
+
 ## **Custom Food Effects:**
