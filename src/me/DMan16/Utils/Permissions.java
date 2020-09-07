@@ -29,18 +29,12 @@ public class Permissions {
 	}
 	
 	public static void registerPermissions(Server server) {
-		try {
-			server.getPluginManager().addPermission(preventPerm);
-			server.getPluginManager().addPermission(commandPerm);
-		} catch (Exception e) {
-		}
+		server.getPluginManager().addPermission(preventPerm);
+		server.getPluginManager().addPermission(commandPerm);
 	}
 	
 	public static void unregisterPermissions(Server server) {
-		try {
-			server.getPluginManager().removePermission(preventPerm);
-			server.getPluginManager().removePermission(commandPerm);
-		} catch (Exception e) {
-		}
+		server.getPluginManager().removePermission(preventPerm);
+		server.getPluginManager().removePermission(commandPerm);
 	}
 }

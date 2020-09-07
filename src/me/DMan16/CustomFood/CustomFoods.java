@@ -23,7 +23,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import com.mojang.datafixers.util.Pair;
 
-import me.DMan16.Utils.MCFoodsDefault;
+import me.DMan16.Config.FoodsConfigManager;
+import me.DMan16.Config.MCFoodsDefault;
 import me.DMan16.Utils.Permissions;
 import me.DMan16.Utils.Utils;
 
@@ -34,6 +35,7 @@ public class CustomFoods {
 	final static List<String> customFood = Arrays.asList("get","set","remove");
 	final static List<String> customFoodEffect = Arrays.asList("get","add","remove","remove_all");
 	final static List<String> customFoodEffectAdd = Arrays.asList("give","clear");
+	final static List<Material> equipSound = Arrays.asList(Material.BEETROOT_SOUP,Material.MUSHROOM_STEW,Material.RABBIT_STEW,Material.SUSPICIOUS_STEW);
 	final static int maxHunger = 20;
 	final static int maxSaturation = 20;
 	private static Advancement food1 = null;
@@ -55,7 +57,7 @@ public class CustomFoods {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			if (Permissions.CommandPermission(player)) {
-				if (!player.getInventory().getItemInMainHand().getType().isAir()) {
+				if (player.getInventory().getItemInMainHand() != null) {
 					String usage = customFoodName + " <" + String.join("/",customFood) + ">";
 					String usageSet = customFoodName + " " + customFood.get(1) + " <hunger> <saturation> <chance> (hunger - Integer <= " +
 							Integer.toString(maxHunger) + ", saturation <=  " + Integer.toString(maxSaturation) + " [precision: 0.1])";
@@ -150,7 +152,7 @@ public class CustomFoods {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			if (Permissions.CommandPermission(player)) {
-				if (!player.getInventory().getItemInMainHand().getType().isAir()) {
+				if (player.getInventory().getItemInMainHand() != null) {
 					String usage = customFoodEffectName + " <" + String.join("/",customFoodEffect) + ">";
 					String usageRemove = customFoodEffectName + " " + customFoodEffect.get(2) + " <type>";
 					String usageAdd = customFoodEffectName + " " + customFoodEffect.get(1) + " <" + String.join("/",customFoodEffectAdd) + ">";
@@ -511,10 +513,7 @@ public class CustomFoods {
 			}
 		}
 		if (regular) {
-			MCFoodsDefault tempFood = MCFoodsDefault.getFood(item.getType());
-			if (tempFood != null) {
-				food = tempFood.asFood();
-			}
+			food = FoodsConfigManager.get(item.getType());
 		}
 		if (food != null) {
 			if (consumeFood(player,food)) {
@@ -532,7 +531,20 @@ public class CustomFoods {
 					}
 				}
 				if (player.getGameMode() != GameMode.CREATIVE) {
-					item.setAmount(item.getAmount() - 1);
+					ItemStack newItem = null;
+					if (item.getType() == Material.HONEY_BOTTLE) {
+						newItem = new ItemStack(Material.GLASS_BOTTLE);
+					} else if (equipSound.contains(item.getType())) {
+						newItem = new ItemStack(Material.BOWL);
+					}
+					if (item.getAmount() == 1) {
+						player.getInventory().setItemInMainHand(newItem);
+					} else {
+						item.setAmount(item.getAmount() - 1);
+						if (newItem != null) {
+							player.getInventory().addItem(newItem);
+						}
+					}
 				}
 				return true;
 			} else if (item.getType() == Material.PLAYER_HEAD && container.has(customFoodNamespacedKey,PersistentDataType.STRING)) {
@@ -558,7 +570,16 @@ public class CustomFoods {
 				applyEffects(player,food.effects);
 			}
 		}
-		player.playSound(player.getLocation(),Sound.ENTITY_PLAYER_BURP,1F,1F);
+		if (food.material == Material.HONEY_BOTTLE) {
+			player.playSound(player.getLocation(),Sound.ITEM_HONEY_BOTTLE_DRINK,1F,1F);
+			player.playSound(player.getLocation(),Sound.ITEM_ARMOR_EQUIP_GENERIC,1F,1F);
+		} else {
+			player.playSound(player.getLocation(),Sound.ENTITY_PLAYER_BURP,1F,1F);
+			player.playSound(player.getLocation(),Sound.ENTITY_GENERIC_EAT,1F,1F);
+			if (equipSound.contains(food.material)) {
+				player.playSound(player.getLocation(),Sound.ITEM_ARMOR_EQUIP_GENERIC,1F,1F);
+			}
+		}
 		return true;
 	}
 	

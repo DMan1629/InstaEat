@@ -6,17 +6,17 @@ import org.bukkit.Material;
 import org.bukkit.potion.PotionEffect;
 
 public class CustomFood {
-	final Material material;
-	final int hunger;
-	final float saturation;
-	final List<PotionEffect> effects;
-	final int chance;
+	public final Material material;
+	public final int hunger;
+	public final float saturation;
+	public final List<PotionEffect> effects;
+	public final int chance;
 	
 	public CustomFood(Material material, int hunger, float saturation, List<PotionEffect> effects, int chance) {
 		this.material = material;
-		this.hunger = hunger;
-		this.saturation = saturation;
+		this.hunger = hunger < 0 ? 0 : (hunger > CustomFoods.maxHunger ? CustomFoods.maxHunger : hunger);
+		this.saturation = saturation < 0 ? 0 : (saturation > CustomFoods.maxSaturation ? CustomFoods.maxSaturation : saturation);
 		this.effects = effects;
-		this.chance = chance;
+		this.chance = chance < 0 ? 0 : chance;
 	}
 }

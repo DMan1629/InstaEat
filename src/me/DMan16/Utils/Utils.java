@@ -44,6 +44,10 @@ public class Utils {
 		return ChatColor.stripColor(str);
 	}
 	
+	public static void chatColorsLog(String str) {
+		InstaEat.getLog().info(chatColors(str));
+	}
+	
 	public static boolean isInteractable(Material material) {
 		if (interactable == null) {
 			createInteractable();

@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.DMan16.Config.FoodsConfigManager;
 import me.DMan16.CustomFood.CommandListener;
 import me.DMan16.Utils.CheckVersion;
 import me.DMan16.Utils.Permissions;
@@ -17,6 +18,7 @@ public class InstaEat extends JavaPlugin {
 	private static String pluginName = "InstaEat";
 	private static String pluginNameColors = "&e&lInsta&c&lEat";
 	private static CheckVersion version;
+	public static FoodsConfigManager foodsManager;
 	
 	public void onEnable() {
 		main = this;
@@ -25,6 +27,11 @@ public class InstaEat extends JavaPlugin {
 			log.info(Utils.chatColorsPlugin("&cunsupported version: " +
 					Bukkit.getServer().getVersion().split("\\(MC:")[1].split("\\)")[0].trim().split(" ")[0].trim() + "!"));
 			log.info(Utils.chatColorsPlugin("&csupported versions: " + version.supportedVersions() + "."));
+			Bukkit.getPluginManager().disablePlugin(this);
+			return;
+		}
+		foodsManager = new FoodsConfigManager();
+		if (foodsManager.stop) {
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
 		}
@@ -49,7 +56,7 @@ public class InstaEat extends JavaPlugin {
 		return main;
 	}
 
-	static Logger getLog() {
+	public static Logger getLog() {
 		return log;
 	}
 

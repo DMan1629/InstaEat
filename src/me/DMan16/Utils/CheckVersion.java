@@ -32,7 +32,7 @@ public class CheckVersion {
 	}
 
 	private enum Version {
-		v1_14("1.14"),v1_15("1.15"),v1_16("1.16");
+		v1_16("1.16");
 		private final String id;
 		
 		private Version(String id) {
