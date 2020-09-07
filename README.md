@@ -61,4 +61,4 @@ Run the command `instaeat customfoodeffect get` while holding a Custom Food with
 
 ***
 
-If any problems arise from the plugin, please open an [issue](https://github.com/DMan1629/InstaEat/issues) or write in the plugin's [Spigot discussion page]().
+If any problems arise from the plugin, please open an [issue](https://github.com/DMan1629/InstaEat/issues) or write in the plugin's [Spigot discussion page](https://www.spigotmc.org/threads/instaeat.462064/).
