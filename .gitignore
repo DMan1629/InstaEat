@@ -14,3 +14,9 @@ bin/me/DMan16/Utils/CheckVersion.class
 bin/me/DMan16/Utils/MCFoodsDefault.class
 bin/me/DMan16/Utils/Permissions.class
 bin/me/DMan16/Utils/Utils.class
+bin/me/DMan16/Config/FoodsConfigManager$JString.class
+bin/me/DMan16/Config/FoodsConfigManager$JString.class
+bin/me/DMan16/Config/FoodsConfigManager.class
+bin/me/DMan16/Config/JsonLoader.class
+bin/me/DMan16/Config/MCFoodsDefault.class
+.settings/org.eclipse.core.resources.prefs
