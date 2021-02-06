@@ -1,5 +1,5 @@
 # InstaEat
-#### Instant food consumption and custom foods! [SpigotMC!](https://www.spigotmc.org/resources/instaeat.83645/)
+#### Instant food consumption and custom foods! [SpigotMC](https://www.spigotmc.org/resources/instaeat.83645/)
 
 InstaEat immediately consumes the food item when right-clicking. All the vanilla Minecraft special effects - status effects, advancement progression, planting - have not changed.
 
